@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet, Button, View, Text, ActivityIndicator} from 'react-native';
 import {TextField} from 'react-native-material-textfield';
 const NUMBER_OF_REQUIRED_FIELDS = 3;
+
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -11,6 +12,7 @@ export default class App extends React.Component {
       form: {},
     };
   }
+
   submit = () => {
     if (this.isDisabled) {
       return;
@@ -20,19 +22,15 @@ export default class App extends React.Component {
       this.setState({isLoading: false, isCompleted: true});
     }, 2000);
   };
+
   updateField(field) {
     return value => this.setState({form: {...this.state.form, [field]: value}});
   }
-  get isDisabled() {
-    const keys = Object.keys(this.state.form);
-    if (keys.length !== NUMBER_OF_REQUIRED_FIELDS) {
-      return true;
-    }
-    return !!keys.find(key => !this.state.form[key]);
-  }
+
   get thankYou() {
-    return `Thank you, ${this.state.form.firstName} ${this.state.form.lastName}`;
+    return 'Thank you';
   }
+
   reset = () => this.setState({isCompleted: false, form: {}});
   render() {
     if (this.state.isLoading) {
@@ -61,47 +59,21 @@ export default class App extends React.Component {
             {this.thankYou}
           </Text>
           <View style={styles.backButton}>
-            <Button title="Go Back" onPress={this.reset} />
+            <Button
+              title="Go Back"
+              onPress={this.reset}
+              accessibilityLabel="pressback"
+            />
           </View>
         </View>
       );
     }
     return (
       <View style={styles.container}>
-        <TextField
-          onChangeText={this.updateField('firstName')}
-          accessibilityLabel="first name input"
-          accessible={true}
-          autoCorrect={false}
-          lineWidth={1}
-          style={styles.input}
-          value={this.state.form.firstName}
-          label="First Name"
-        />
-        <TextField
-          onChangeText={this.updateField('lastName')}
-          accessibilityLabel="last name input"
-          accessible={true}
-          lineWidth={1}
-          autoCorrect={false}
-          value={this.state.form.lastName}
-          label="Last Name"
-        />
-        <TextField
-          onChangeText={this.updateField('email')}
-          accessibilityLabel="email input"
-          accessible={true}
-          lineWidth={1}
-          autoCorrect={false}
-          value={this.state.form.email}
-          containerStyle={styles.emailInput}
-          label="Email"
-        />
         <Button
           accessibilityLabel="submit button"
           accessible={true}
           onSubmitEditing={this.submit}
-          disabled={this.isDisabled}
           title="Submit"
           onPress={this.submit}
         />

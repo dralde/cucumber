@@ -8,26 +8,32 @@ const SWIPE_DIRECTION = {
   down: 'down',
 };
 const waitFor = el => {
-  browser.waitForExist(el, TIMEOUT);
-  const isVisible = browser.isVisible(el);
-  // ios visibility is done differently than Android
-  let isFlattedVisible = Array.isArray(isVisible)
-    ? !isVisible.find(visibility => !visibility)
-    : isVisible;
-  expect(isFlattedVisible).to.equal(true);
+  $(el).waitForExist(TIMEOUT);
+
+  const isVisible = $(el).isDisplayed();
+
+  expect(isVisible).to.equal(true);
 };
 
 Given(/^Click element: "([^"]*)?"$/, elId => {
-  browser.click('~' + elId);
+  $('~' + elId).click();
 });
 
-Given(/^Click element with text: "([^"]*)?"$/, text => {
-  // ios not supported
-  browser.click(`//*[@text='${text}']`);
+Given(/^Element log: "([^"]*)?"$/, elId => {
+  const el = $('~' + elId);
+  el.click();
+  console.log();
+  // browser.waitUntil(
+  //   () => {
+
+  //     el.click();
+  //   },
+  //   0,
+  //   'wait for elemento',
+  // );
 });
 
 Given(/^Wait for element: "([^"]*)?"$/, elId => {
   const el = '~' + elId;
-  console.log(el);
   waitFor(el);
 });
