@@ -1,12 +1,6 @@
-
 exports.config = {
-  specs: [
-    './e2e/**/**.feature'
-  ],
   // Patterns to exclude.
-  exclude: [
-    './node_modules/**/**.feature'
-  ],
+  exclude: ['./node_modules/**/**.feature'],
   sync: true,
   //
   // Level of logging verbosity: silent | verbose | command | data | result |
@@ -20,9 +14,7 @@ exports.config = {
   reporters: ['spec'],
   cucumberOpts: {
     // backtrace: true,
-    compiler: [
-      'ts:ts-node/register',
-    ],
+    compiler: ['ts:ts-node/register'],
     format: ['pretty', 'progress'],
     // <boolean< Treat ambiguous definitions as errors
     failAmbiguousDefinitions: true,
@@ -43,9 +35,7 @@ exports.config = {
     // <string[]> (name) specify the profile to use
     profile: ['progress'],
     // <string[]> (file/dir) require files before executing features
-    require: [
-      './e2e/steps/**/**.ts'
-    ],
+    require: ['./e2e/steps/**/**.ts'],
     // <string> specify a custom snippet syntax
     snippetSyntax: undefined,
     // <boolean> fail if there are any undefined or pending steps
@@ -65,8 +55,7 @@ exports.config = {
   // Hooks
   // =====
   // Gets executed once before all workers get launched.
-  onPrepare: function onPrepare(config, capabilities) {
-  },
+  onPrepare: function onPrepare(config, capabilities) {},
   //
   // Gets executed before test execution begins. At this point you can access
   // all global variables, such as `browser`. It is the perfect place to
@@ -126,4 +115,4 @@ exports.config = {
   //
   // Gets executed after all workers got shut down and the process is about to
   // exit. It is not possible to defer the end of the process using a promise.
-}
+};

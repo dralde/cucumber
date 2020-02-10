@@ -20,36 +20,14 @@ const waitFor = el => {
 Given(/^Click element: "([^"]*)?"$/, elId => {
   browser.click('~' + elId);
 });
+
 Given(/^Click element with text: "([^"]*)?"$/, text => {
   // ios not supported
   browser.click(`//*[@text='${text}']`);
 });
+
 Given(/^Wait for element: "([^"]*)?"$/, elId => {
   const el = '~' + elId;
+  console.log(el);
   waitFor(el);
-});
-Given(/^Wait for element with text: "([^"]*)?"$/, text => {
-  // ios not supported
-  waitFor(`//*[@text='${text}']`);
-});
-Given(/^Element: "([^"]*)?" should have text: "([^"]*)?"$/, (elId, text) => {
-  const elementText = browser.getText('~' + elId);
-  expect(elementText).to.equal(text);
-});
-Given(/^Swipe "?([^"]*)"? element: "([^"]*)?"$/, (direction, elId) => {
-  const selector = `~${elId}`;
-  const time = 600;
-  switch (direction) {
-    case SWIPE_DIRECTION.right:
-      browser.swipeRight(selector, time);
-      break;
-    case SWIPE_DIRECTION.left:
-      browser.swipeLeft(selector, time);
-      break;
-    case SWIPE_DIRECTION.down:
-      browser.swipeDown(selector, time);
-      break;
-    default:
-      browser.swipeUp(selector, time);
-  }
 });

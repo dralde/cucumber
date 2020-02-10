@@ -42,10 +42,12 @@ const getCapability = () => {
   }
   return [capabilities.ios, capabilities.android];
 };
+
 exports.config = Object.assign(commonConfig.config, {
   capabilities: getCapability(),
   services: ['appium'],
-  maxInstances: 2,
+  maxInstances: 1,
+  specs: ['./e2e/**/**.feature'],
   appium: {
     waitStartTime: 6000,
     args: {

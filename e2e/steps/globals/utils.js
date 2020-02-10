@@ -3,9 +3,11 @@ import {Given} from 'cucumber';
 export const isAndroid = () => {
   return browser.desiredCapabilities.platformName === 'Android';
 };
+
 Given(/^Launch App$/, () => {
   browser.timeouts('implicit', 10000);
 });
+
 Given(/^Wait "?([^"]*)"? seconds$/, seconds => {
   return browser.timeoutsImplicitWait(parseInt(seconds, 10) * 1000);
 });
