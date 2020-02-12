@@ -38,6 +38,7 @@ const capabilities = {
     nativeInstrumentsLib: true,
     isolateSimDevice: true,
     platformVersion: '13.3',
+    automationName: 'XCUITest',
     deviceName: 'iPhone 11',
     app: getAppPath(),
   },
@@ -62,7 +63,7 @@ exports.config = {
   exclude: ['./node_modules/**/**.feature'],
   maxInstances: 1,
   capabilities: getCapability(),
-  logLevel: 'silent',
+  logLevel: 'debug',
   sync: true,
   //
   // Set specific log levels per logger
@@ -176,8 +177,9 @@ exports.config = {
    * @param {Array.<Object>} capabilities list of capabilities details
    * @param {Array.<String>} specs List of spec file paths that are to be run
    */
-  // beforeSession: function (config, capabilities, specs) {
-  // },
+  beforeSession: function(config, capabilities, specs) {
+    require('@babel/register');
+  },
   /**
    * Gets executed before test execution begins. At this point you can access to all global
    * variables like `browser`. It is the perfect place to define custom commands.

@@ -3,6 +3,6 @@ Feature: Sign up form
   Scenario: Fill in sign up form
     Given Wait for element: "first name input"
     When Click element: "submit button"
-    Then Wait for element: "completed screen"
+    Then Wait for complete: "completed screen"
 
 

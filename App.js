@@ -12,36 +12,14 @@ export default class App extends React.Component {
     };
   }
   submit = () => {
-    if (this.isDisabled) {
-      return;
-    }
-    this.setState({isLoading: true});
-    setTimeout(() => {
-      this.setState({isLoading: false, isCompleted: true});
-    }, 2000);
+    this.setState({isLoading: false, isCompleted: true});
   };
-  updateField(field) {
-    return value => this.setState({form: {...this.state.form, [field]: value}});
-  }
-  get isDisabled() {
-    const keys = Object.keys(this.state.form);
-    if (keys.length !== NUMBER_OF_REQUIRED_FIELDS) {
-      return true;
-    }
-    return !!keys.find(key => !this.state.form[key]);
-  }
+
   get thankYou() {
-    return `Thank you, ${this.state.form.firstName} ${this.state.form.lastName}`;
+    return `Thank you`;
   }
-  reset = () => this.setState({isCompleted: false, form: {}});
+
   render() {
-    if (this.state.isLoading) {
-      return (
-        <View style={styles.centerScreen}>
-          <ActivityIndicator size="large" />
-        </View>
-      );
-    }
     if (this.state.isCompleted) {
       return (
         <View
@@ -69,7 +47,6 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <TextField
-          onChangeText={this.updateField('firstName')}
           accessibilityLabel="first name input"
           accessible={true}
           autoCorrect={false}
@@ -79,7 +56,6 @@ export default class App extends React.Component {
           label="First Name"
         />
         <TextField
-          onChangeText={this.updateField('lastName')}
           accessibilityLabel="last name input"
           accessible={true}
           lineWidth={1}
@@ -88,7 +64,6 @@ export default class App extends React.Component {
           label="Last Name"
         />
         <TextField
-          onChangeText={this.updateField('email')}
           accessibilityLabel="email input"
           accessible={true}
           lineWidth={1}
@@ -101,7 +76,6 @@ export default class App extends React.Component {
           accessibilityLabel="submit button"
           accessible={true}
           onSubmitEditing={this.submit}
-          disabled={this.isDisabled}
           title="Submit"
           onPress={this.submit}
         />
