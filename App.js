@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet, Button, View, Text, ActivityIndicator} from 'react-native';
 import {TextField} from 'react-native-material-textfield';
 const NUMBER_OF_REQUIRED_FIELDS = 3;
+
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -11,6 +12,7 @@ export default class App extends React.Component {
       form: {},
     };
   }
+
   submit = () => {
     this.setState({isLoading: false, isCompleted: true});
   };
@@ -39,7 +41,11 @@ export default class App extends React.Component {
             {this.thankYou}
           </Text>
           <View style={styles.backButton}>
-            <Button title="Go Back" onPress={this.reset} />
+            <Button
+              title="Go Back"
+              onPress={this.reset}
+              accessibilityLabel="pressback"
+            />
           </View>
         </View>
       );

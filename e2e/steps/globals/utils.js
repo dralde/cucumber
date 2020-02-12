@@ -14,6 +14,7 @@ Given(/^Wait "?([^"]*)"? seconds$/, seconds => {
 Given(/^Toggle Location Services$/, () => {
   browser.toggleLocationServices();
 });
+
 Given(/^Check for first element$/, () => {
   try {
     browser.click('~app view');
