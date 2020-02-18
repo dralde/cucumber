@@ -2,7 +2,6 @@ import React from 'react';
 import {StyleSheet, Button, View, Text, ActivityIndicator} from 'react-native';
 import {TextField} from 'react-native-material-textfield';
 const NUMBER_OF_REQUIRED_FIELDS = 3;
-
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -12,14 +11,18 @@ export default class App extends React.Component {
       form: {},
     };
   }
-
   submit = () => {
     this.setState({isLoading: false, isCompleted: true});
   };
+  updateField(field) {
+    return value => this.setState({form: {...this.state.form, [field]: value}});
+  }
 
   get thankYou() {
-    return `Thank you`;
+    return `Thank you, ${this.state.form.firstName} ${this.state.form.lastName}`;
   }
+
+  reset = () => this.setState({isCompleted: false, form: {}});
 
   render() {
     if (this.state.isCompleted) {
@@ -41,11 +44,7 @@ export default class App extends React.Component {
             {this.thankYou}
           </Text>
           <View style={styles.backButton}>
-            <Button
-              title="Go Back"
-              onPress={this.reset}
-              accessibilityLabel="pressback"
-            />
+            <Button title="Go Back" onPress={this.reset} />
           </View>
         </View>
       );
@@ -53,6 +52,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <TextField
+          onChangeText={this.updateField('firstName')}
           accessibilityLabel="first name input"
           accessible={true}
           autoCorrect={false}
@@ -62,6 +62,7 @@ export default class App extends React.Component {
           label="First Name"
         />
         <TextField
+          onChangeText={this.updateField('lastName')}
           accessibilityLabel="last name input"
           accessible={true}
           lineWidth={1}
@@ -70,6 +71,7 @@ export default class App extends React.Component {
           label="Last Name"
         />
         <TextField
+          onChangeText={this.updateField('email')}
           accessibilityLabel="email input"
           accessible={true}
           lineWidth={1}

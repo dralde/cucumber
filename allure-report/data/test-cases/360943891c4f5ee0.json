@@ -1,0 +1,56 @@
+{
+  "uid" : "360943891c4f5ee0",
+  "name" : "Then Click element: \"submit button\"",
+  "fullName" : "Sign up form: Fill in sign up form.Then Click element: \"submit button\"",
+  "historyId" : "4db63f141dd883e6e0fe32b0dcd939ec",
+  "time" : {
+    "start" : 1581615513317,
+    "stop" : 1581615513938,
+    "duration" : 621
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Sign up form: Fill in sign up form"
+  }, {
+    "name" : "testClass",
+    "value" : "Sign up form: Fill in sign up form"
+  }, {
+    "name" : "testMethod",
+    "value" : "Then Click element: \"submit button\""
+  }, {
+    "name" : "package",
+    "value" : "Sign up form: Fill in sign up form"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "iOS-13.3"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "360943891c4f5ee0.json",
+  "parameterValues" : [ "iOS-13.3" ]
+}

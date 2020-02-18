@@ -1,0 +1,130 @@
+{
+  "uid" : "8579797c96c0a783",
+  "name" : "Then Wait for complete: \"completed screen\"",
+  "fullName" : "Sign up form: Fill in sign up form.Then Wait for complete: \"completed screen\"",
+  "historyId" : "d8308eab3660702d15305d1a6b00c99b",
+  "time" : {
+    "start" : 1581615910807,
+    "stop" : 1581615911167,
+    "duration" : 360
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Sign up form: Fill in sign up form"
+  }, {
+    "name" : "testClass",
+    "value" : "Sign up form: Fill in sign up form"
+  }, {
+    "name" : "testMethod",
+    "value" : "Then Wait for complete: \"completed screen\""
+  }, {
+    "name" : "package",
+    "value" : "Sign up form: Fill in sign up form"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "iOS-13.3"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "63472a790a1fe538",
+      "status" : "passed",
+      "time" : {
+        "start" : 1581615513938,
+        "stop" : 1581615514302,
+        "duration" : 364
+      }
+    }, {
+      "uid" : "425de4ce8074af24",
+      "status" : "passed",
+      "time" : {
+        "start" : 1581615454664,
+        "stop" : 1581615455047,
+        "duration" : 383
+      }
+    }, {
+      "uid" : "87e32c16c5216ba9",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1581615391116,
+        "stop" : 1581615391117,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "fde98e7206c66b9a",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1581615329581,
+        "stop" : 1581615329581,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "8c6381202994e05d",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1581608345789,
+        "stop" : 1581608345789,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "1645207d94e14cc2",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1581608279105,
+        "stop" : 1581608279105,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "1575520ecc608863",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1581608011221,
+        "stop" : 1581608011221,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "66a0844b9b410bd0",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1581607817182,
+        "stop" : 1581607817182,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "2748d8577b7ecc67",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1581607739600,
+        "stop" : 1581607739600,
+        "duration" : 0
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8579797c96c0a783.json",
+  "parameterValues" : [ "iOS-13.3" ]
+}

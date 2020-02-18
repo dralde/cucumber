@@ -1,0 +1,56 @@
+{
+  "uid" : "2a7bba35bb9c46f1",
+  "name" : "Given Wait for element: \"first name input\"",
+  "fullName" : "Sign up form: Fill in sign up form.Given Wait for element: \"first name input\"",
+  "historyId" : "28fc920227068129461594e23d206b16",
+  "time" : {
+    "start" : 1581615381304,
+    "stop" : 1581615381534,
+    "duration" : 230
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Sign up form: Fill in sign up form"
+  }, {
+    "name" : "testClass",
+    "value" : "Sign up form: Fill in sign up form"
+  }, {
+    "name" : "testMethod",
+    "value" : "Given Wait for element: \"first name input\""
+  }, {
+    "name" : "package",
+    "value" : "Sign up form: Fill in sign up form"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "iOS-13.3"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "2a7bba35bb9c46f1.json",
+  "parameterValues" : [ "iOS-13.3" ]
+}

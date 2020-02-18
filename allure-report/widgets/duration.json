@@ -1,0 +1,51 @@
+[ {
+  "uid" : "173756b43490a2d3",
+  "name" : "When Fill user input: \"first name input\"",
+  "time" : {
+    "start" : 1581615905827,
+    "stop" : 1581615910224,
+    "duration" : 4397
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "413478a4f3c05c82",
+  "name" : "Given Wait for element: \"first name input\"",
+  "time" : {
+    "start" : 1581615905599,
+    "stop" : 1581615905827,
+    "duration" : 228
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4f891c82b8251c0b",
+  "name" : "Hook",
+  "time" : {
+    "start" : 1581615911167,
+    "stop" : 1581615911167,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e30e620d31649273",
+  "name" : "Then Click element: \"submit button\"",
+  "time" : {
+    "start" : 1581615910225,
+    "stop" : 1581615910807,
+    "duration" : 582
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8579797c96c0a783",
+  "name" : "Then Wait for complete: \"completed screen\"",
+  "time" : {
+    "start" : 1581615910807,
+    "stop" : 1581615911167,
+    "duration" : 360
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

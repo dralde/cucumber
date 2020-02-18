@@ -1,0 +1,58 @@
+{
+  "uid" : "f21819c69fb850dd",
+  "name" : "When Fill user input: \"first name input\"",
+  "fullName" : "Sign up form: Fill in sign up form.When Fill user input: \"first name input\"",
+  "historyId" : "231f2dbf8e39c53cef4fa9564fab8271",
+  "time" : {
+    "start" : 1581608006469,
+    "stop" : 1581608011220,
+    "duration" : 4751
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "expected null to equal 'danny'",
+  "statusTrace" : "AssertionError: expected null to equal 'danny'\n                    at World.<anonymous> (/Users/danny/Dev/cucumber/features/steps/test.js:19:48)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Sign up form: Fill in sign up form"
+  }, {
+    "name" : "testClass",
+    "value" : "Sign up form: Fill in sign up form"
+  }, {
+    "name" : "testMethod",
+    "value" : "When Fill user input: \"first name input\""
+  }, {
+    "name" : "package",
+    "value" : "Sign up form: Fill in sign up form"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "iOS-13.3"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f21819c69fb850dd.json",
+  "parameterValues" : [ "iOS-13.3" ]
+}

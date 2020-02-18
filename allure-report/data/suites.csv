@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Feb 13 14:45:05 ART 2020","Thu Feb 13 14:45:10 ART 2020","4397","","Sign up form: Fill in sign up form","","Sign up form: Fill in sign up form","When Fill user input: ""first name input""","When Fill user input: ""first name input""",""
+"passed","Thu Feb 13 14:45:05 ART 2020","Thu Feb 13 14:45:05 ART 2020","228","","Sign up form: Fill in sign up form","","Sign up form: Fill in sign up form","Given Wait for element: ""first name input""","Given Wait for element: ""first name input""",""
+"passed","Thu Feb 13 14:45:11 ART 2020","Thu Feb 13 14:45:11 ART 2020","0","","Sign up form: Fill in sign up form","","Sign up form: Fill in sign up form","Hook","Hook",""
+"passed","Thu Feb 13 14:45:10 ART 2020","Thu Feb 13 14:45:10 ART 2020","582","","Sign up form: Fill in sign up form","","Sign up form: Fill in sign up form","Then Click element: ""submit button""","Then Click element: ""submit button""",""
+"passed","Thu Feb 13 14:45:10 ART 2020","Thu Feb 13 14:45:11 ART 2020","360","","Sign up form: Fill in sign up form","","Sign up form: Fill in sign up form","Then Wait for complete: ""completed screen""","Then Wait for complete: ""completed screen""",""
