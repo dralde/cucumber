@@ -28,7 +28,7 @@
     "@babel/traverse": "^7.8.4",
     "@babel/types": "^7.8.3",
     "@react-native-community/eslint-config": "^0.0.7",
-    "@rpii/wdio-html-reporter": "^0.8.6",
+    "@rpii/wdio-html-reporter": "^7.7.1",
     "@wdio/allure-reporter": "^5.18.6",
     "@wdio/appium-service": "^5.18.2",
     "@wdio/cli": "^5.18.6",
